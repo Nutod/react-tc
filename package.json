@@ -1,5 +1,6 @@
 {
   "name": "tc",
+  "author": "Oladotun Aluko",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
