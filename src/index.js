@@ -15,12 +15,13 @@ const breakpoints = {
 	desktopWide: 1920
 };
 
-ReactDOM.render(
-	<ReactBreakpoints breakpoints={breakpoints}>
+const app = (
+	<ReactBreakpoints breakpoints={breakpoints} debounceResize={true}>
 		<App />
-	</ReactBreakpoints>,
-	document.getElementById("root")
+	</ReactBreakpoints>
 );
+
+ReactDOM.render(app, document.getElementById("root"));
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
