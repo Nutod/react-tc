@@ -1,20 +1,16 @@
 import React from "react";
 import styled from "styled-components";
-import Logo from "../Logo/Logo";
+import Navigation from "../Navigation/Navigation";
 
 const HeaderWrapper = styled.div`
-	display: flex;
 	background: #444;
 	padding: 0.5rem 3.5rem;
-	justify-content: space-between;
-	align-items: center;
 `;
 
 export default function Header() {
 	return (
 		<HeaderWrapper>
-			<Logo />
-			<p>Navbar</p>
+			<Navigation />
 		</HeaderWrapper>
 	);
 }
