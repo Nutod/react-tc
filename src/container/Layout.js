@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import styled from "styled-components";
+import Header from "../components/Header/Header";
 
 const LayoutWrapper = styled.div`
 	display: grid;
@@ -10,8 +11,16 @@ export default class Layout extends Component {
 	render() {
 		return (
 			<LayoutWrapper>
-				<div>HEADER</div>
-				<div>CONTENT</div>
+				<Header />
+				<div>
+					CONTENT{" "}
+					<p>
+						Lorem ipsum dolor sit, amet consectetur adipisicing elit. Mollitia
+						accusamus rerum eum hic sequi pariatur consectetur enim perspiciatis
+						eos totam quisquam expedita soluta, ab est. Est optio nulla dolores
+						blanditiis!
+					</p>{" "}
+				</div>
 			</LayoutWrapper>
 		);
 	}
