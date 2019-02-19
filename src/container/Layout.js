@@ -6,6 +6,7 @@ import Me from "../components/Me/Me";
 import Feeds from "../components/Feeds/Feeds";
 import Suggestions from "../components/Suggestions/Suggestions";
 import { AppContext } from "../hoc/AppContext";
+import NewPost from "../components/NewPost/NewPost";
 
 const LayoutWrapper = styled.div`
 	display: grid;
@@ -41,32 +42,6 @@ const Content = styled.div`
 	}
 `;
 
-// export default class App extends React.Component {
-// 	state = {
-// 		open: false,
-// 	};
-
-// 	onOpenModal = () => {
-// 		this.setState({ open: true });
-// 	};
-
-// 	onCloseModal = () => {
-// 		this.setState({ open: false });
-// 	};
-
-// 	render() {
-// 		const { open } = this.state;
-// 		return (
-// 			<div>
-// 				<button onClick={this.onOpenModal}>Open modal</button>
-// 				<Modal open={open} onClose={this.onCloseModal} center>
-// 					<h2>Simple centered modal</h2>
-// 				</Modal>
-// 			</div>
-// 		);
-// 	}
-// }
-
 export default class Layout extends Component {
 	state = {
 		modalOpen: false
@@ -85,21 +60,20 @@ export default class Layout extends Component {
 			<AppContext.Provider
 				value={{
 					open: this.state.modalOpen,
-					onOpen: this.onOpenModal,
-					onClose: this.onCloseModal
+					openModal: this.onOpenModal,
+					closeModal: this.onCloseModal
 				}}
 			>
 				<LayoutWrapper>
 					<Header />
 					<Button>3 New Posts</Button>
 					<div>
-						<button onClick={this.onOpenModal}>Open modal</button>
 						<Modal
 							open={this.state.modalOpen}
 							onClose={this.onCloseModal}
 							center
 						>
-							<h2>Simple centered modal</h2>
+							<NewPost />
 						</Modal>
 					</div>
 					<Content>

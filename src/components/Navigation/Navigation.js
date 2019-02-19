@@ -75,8 +75,7 @@ const Button = styled.button`
 export default function Navigation() {
 	return (
 		<AppContext.Consumer>
-			{context => {
-				console.log(context);
+			{({ openModal }) => {
 				return (
 					<Media>
 						{({ breakpoints, currentBreakpoint }) => {
@@ -102,27 +101,38 @@ export default function Navigation() {
 													placeholder="Search"
 												/>
 											</li>
-											{/* <li>
+											<li>
 												<Menu
 													label=""
 													items={[
 														{ label: "First Action", onClick: () => {} },
 														{ label: "Second Action", onClick: () => {} }
 													]}
-													icon={<MailOption />}
+													icon={<MailOption size="medium" color="#fff" />}
 												/>
-											</li> */}
-											<li>
-												<MailOption size="medium" color="#fff" />
 											</li>
 											<li>
-												<Notification size="medium" color="#fff" />
+												<Menu
+													label=""
+													items={[
+														{ label: "First Action", onClick: () => {} },
+														{ label: "Second Action", onClick: () => {} }
+													]}
+													icon={<Notification size="medium" color="#fff" />}
+												/>
 											</li>
 											<li>
-												<Image src={User} alt="User" />
+												<Menu
+													label=""
+													items={[
+														{ label: "First Action", onClick: () => {} },
+														{ label: "Second Action", onClick: () => {} }
+													]}
+													icon={<Image src={User} alt="User" />}
+												/>
 											</li>
 											<li>
-												<Button>New Post</Button>
+												<Button onClick={openModal}>New Post</Button>
 											</li>
 										</ul>
 									</DesktopNavigationWrapper>
