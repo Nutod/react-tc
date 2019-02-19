@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import styled from "styled-components";
 import Header from "../components/Header/Header";
 import Me from "../components/Me/Me";
+import Feeds from "../components/Feeds/Feeds";
 
 const LayoutWrapper = styled.div`
 	display: grid;
@@ -41,20 +42,7 @@ export default class Layout extends Component {
 				<button>3 New Posts</button>
 				<Content>
 					<Me />
-					<div>
-						<div>
-							Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus
-							suscipit, doloremque molestias neque cum dolorum exercitationem,
-							doloribus eos at deleniti nulla deserunt asperiores, impedit optio
-							earum incidunt voluptatem assumenda fugiat.
-						</div>{" "}
-						<div>
-							Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam,
-							at quam? Reprehenderit consequatur soluta inventore corrupti,
-							consequuntur ipsum facilis perferendis repellat beatae aut ipsam
-							doloribus, excepturi cupiditate recusandae aperiam dignissimos.
-						</div>
-					</div>
+					<Feeds />
 					<div>
 						Lorem ipsum dolor sit, amet consectetur adipisicing elit. Mollitia
 						accusamus rerum eum hic sequi pariatur consectetur enim perspiciatis
