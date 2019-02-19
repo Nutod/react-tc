@@ -46,8 +46,8 @@ export default class Layout extends Component {
 				<Header />
 				<Button>3 New Posts</Button>
 				<Content>
-					<Feeds />
 					<Me />
+					<Feeds />
 					<Suggestions />
 				</Content>
 			</LayoutWrapper>

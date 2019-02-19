@@ -1,8 +1,15 @@
 import React from "react";
+import styled from "styled-components";
+
+const FeedsWrapper = styled.div`
+	@media (max-width: 53em) {
+		order: -1;
+	}
+`;
 
 export default function Feeds() {
 	return (
-		<div>
+		<FeedsWrapper>
 			<div>
 				Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus suscipit,
 				doloremque molestias neque cum dolorum exercitationem, doloribus eos at
@@ -15,6 +22,6 @@ export default function Feeds() {
 				ipsum facilis perferendis repellat beatae aut ipsam doloribus, excepturi
 				cupiditate recusandae aperiam dignissimos.
 			</div>
-		</div>
+		</FeedsWrapper>
 	);
 }
