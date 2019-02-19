@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import styled from "styled-components";
 import Header from "../components/Header/Header";
+import Me from "../components/Me/Me";
 
 const LayoutWrapper = styled.div`
 	display: grid;
@@ -39,12 +40,7 @@ export default class Layout extends Component {
 				<Header />
 				<button>3 New Posts</button>
 				<Content>
-					<div>
-						Lorem, ipsum dolor sit amet consectetur adipisicing elit. Unde
-						provident sed tempore assumenda quia a voluptates reprehenderit
-						commodi. Facilis vero voluptatum unde, magnam laborum aperiam ex
-						veniam sit non dolore!
-					</div>
+					<Me />
 					<div>
 						<div>
 							Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus
