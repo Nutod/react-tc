@@ -9,6 +9,7 @@ const NavigationWrapper = styled.nav`
 		justify-content: space-between;
 		align-items: center;
 		color: #fff;
+		flex-wrap: wrap;
 	}
 
 	li {
