@@ -33,6 +33,10 @@ const Content = styled.div`
 	grid-column-gap: 5rem;
 	grid-row-gap: 1rem;
 	margin: 0 2rem;
+
+	@media (max-width: 53em) {
+		grid-template-columns: 1fr;
+	}
 `;
 
 export default class Layout extends Component {
@@ -42,8 +46,8 @@ export default class Layout extends Component {
 				<Header />
 				<Button>3 New Posts</Button>
 				<Content>
-					<Me />
 					<Feeds />
+					<Me />
 					<Suggestions />
 				</Content>
 			</LayoutWrapper>
