@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { RotateRight } from "grommet-icons";
 import User from "../../assets/images/user1.jpg";
 
 const FollowWrapper = styled.div`
@@ -29,8 +30,14 @@ const Title = styled.p`
 	font-size: 1rem;
 `;
 
-const Icon = styled.p`
+const Icon = styled.div`
 	color: blueviolet;
+	display: flex;
+	align-items: center;
+
+	p {
+		margin-left: 0.5rem;
+	}
 `;
 
 const ContainerContentWrapper = styled.div`
@@ -96,7 +103,10 @@ export default function Follow() {
 			<Container>
 				<ContainerHeader>
 					<Title>Who to Follow</Title>
-					<Icon>refresh</Icon>
+					<Icon>
+						<RotateRight color="blueviolet" size="small" />
+						<p>refresh</p>
+					</Icon>
 				</ContainerHeader>
 				<ContainerContentWrapper>
 					<ContainerContent>
