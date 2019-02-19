@@ -10,19 +10,19 @@ const LayoutWrapper = styled.div`
 	grid-template-rows: auto auto auto;
 	grid-template-columns: 1fr 3fr 1fr;
 	position: relative;
+`;
 
-	button {
-		background: blueviolet;
-		padding: 0.5rem 1rem;
-		color: #fff;
-		border: none;
-		border-radius: 4px;
-		font-size: 1rem;
-		width: 10rem;
-		grid-column: 2 / 3;
-		justify-self: center;
-		margin: 1.5rem;
-	}
+const Button = styled.button`
+	background: blueviolet;
+	padding: 0.5rem 1rem;
+	color: #fff;
+	border: none;
+	border-radius: 4px;
+	font-size: 1rem;
+	width: 10rem;
+	grid-column: 2 / 3;
+	justify-self: center;
+	margin: 1.5rem;
 `;
 
 const Content = styled.div`
@@ -40,7 +40,7 @@ export default class Layout extends Component {
 		return (
 			<LayoutWrapper>
 				<Header />
-				<button>3 New Posts</button>
+				<Button>3 New Posts</Button>
 				<Content>
 					<Me />
 					<Feeds />
