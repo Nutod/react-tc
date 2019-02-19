@@ -4,7 +4,7 @@ import Header from "../components/Header/Header";
 
 const LayoutWrapper = styled.div`
 	display: grid;
-	grid-template-rows: 3rem auto;
+	grid-template-rows: auto auto;
 `;
 
 export default class Layout extends Component {
