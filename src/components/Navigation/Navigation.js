@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { Media } from "react-breakpoints";
+import { MailOption, Notification } from "grommet-icons";
 import Logo from "../Logo/Logo";
 import { AppContext } from "../../hoc/AppContext";
 import User from "../../assets/images/user1.jpg";
@@ -63,8 +64,8 @@ const MobileNavigationWrapper = styled.nav`
 `;
 
 const Image = styled.img`
-	width: 2.5rem;
-	height: 2.5rem;
+	width: 4rem;
+	height: 4rem;
 	border-radius: 50%;
 	margin-right: 1rem;
 `;
@@ -100,10 +101,10 @@ export default function Navigation() {
 												/>
 											</li>
 											<li>
-												<p>Mail</p>
+												<MailOption size="medium" color="#fff" />
 											</li>
 											<li>
-												<p>Alert</p>
+												<Notification size="medium" color="#fff" />
 											</li>
 											<li>
 												<Image src={User} alt="User" />
