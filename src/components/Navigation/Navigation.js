@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { Media } from "react-breakpoints";
 import Logo from "../Logo/Logo";
 
-const NavigationWrapper = styled.nav`
+const DesktopNavigationWrapper = styled.nav`
 	ul {
 		display: flex;
 		list-style: none;
@@ -43,15 +43,31 @@ const NavigationWrapper = styled.nav`
 	}
 `;
 
+const MobileNavigationWrapper = styled.nav`
+	ul {
+		display: flex;
+		list-style: none;
+		justify-content: space-between;
+		align-items: center;
+		color: #fff;
+		flex-wrap: wrap;
+	}
+
+	li {
+		&:not(:last-child) {
+			margin-right: 1rem;
+		}
+	}
+`;
+
 export default function Navigation() {
 	return (
 		<Media>
 			{({ breakpoints, currentBreakpoint }) => {
 				console.log(breakpoints[currentBreakpoint], currentBreakpoint);
-
 				if (currentBreakpoint === "large") {
 					return (
-						<NavigationWrapper>
+						<DesktopNavigationWrapper>
 							<ul>
 								<Logo />
 								<li>
@@ -79,10 +95,17 @@ export default function Navigation() {
 									<button>New Post</button>
 								</li>
 							</ul>
-						</NavigationWrapper>
+						</DesktopNavigationWrapper>
 					);
 				} else {
-					return <p>Mobile</p>;
+					return (
+						<MobileNavigationWrapper>
+							<ul>
+								<Logo />
+								<p>Menu</p>
+							</ul>
+						</MobileNavigationWrapper>
+					);
 				}
 			}}
 		</Media>
