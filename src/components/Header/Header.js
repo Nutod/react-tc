@@ -5,7 +5,9 @@ import Logo from "../Logo/Logo";
 const HeaderWrapper = styled.div`
 	display: flex;
 	background: #444;
-	padding: 1rem 4rem;
+	padding: 0.5rem 3.5rem;
+	justify-content: space-between;
+	align-items: center;
 `;
 
 export default function Header() {
