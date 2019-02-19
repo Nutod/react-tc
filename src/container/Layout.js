@@ -3,6 +3,7 @@ import styled from "styled-components";
 import Header from "../components/Header/Header";
 import Me from "../components/Me/Me";
 import Feeds from "../components/Feeds/Feeds";
+import Suggestions from "../components/Suggestions/Suggestions";
 
 const LayoutWrapper = styled.div`
 	display: grid;
@@ -43,12 +44,7 @@ export default class Layout extends Component {
 				<Content>
 					<Me />
 					<Feeds />
-					<div>
-						Lorem ipsum dolor sit, amet consectetur adipisicing elit. Mollitia
-						accusamus rerum eum hic sequi pariatur consectetur enim perspiciatis
-						eos totam quisquam expedita soluta, ab est. Est optio nulla dolores
-						blanditiis!
-					</div>{" "}
+					<Suggestions />
 				</Content>
 			</LayoutWrapper>
 		);
