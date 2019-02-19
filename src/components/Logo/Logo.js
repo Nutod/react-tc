@@ -4,17 +4,16 @@ import styled from "styled-components";
 const LogoWrapper = styled.div`
 	background: green;
 	color: #fff;
-	font-size: 1.3rem;
+	font-size: 2rem;
 	font-weight: bold;
-	height: 2rem;
 	display: flex;
 	justify-content: center;
-	align-items: center;
-	padding: 0 0.5rem;
+	align-items: flex-start;
+	padding: 0.8rem 1rem;
 	border-radius: 3px;
 
 	span {
-		font-size: 1rem;
+		font-size: 1.8rem;
 	}
 `;
 
