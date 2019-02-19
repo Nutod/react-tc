@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { Media } from "react-breakpoints";
 import Logo from "../Logo/Logo";
 
 const NavigationWrapper = styled.nav`
@@ -44,34 +45,46 @@ const NavigationWrapper = styled.nav`
 
 export default function Navigation() {
 	return (
-		<NavigationWrapper>
-			<ul>
-				<Logo />
-				<li>
-					<a href="home">Home</a>
-				</li>
-				<li>
-					<a href="sessions">Sessions</a>
-				</li>
-				<li>
-					<a href="topics">Topics</a>
-				</li>
-				<li>
-					<input type="search" name="search" placeholder="Search" />
-				</li>
-				<li>
-					<p>Mail</p>
-				</li>
-				<li>
-					<p>Alert</p>
-				</li>
-				<li>
-					<p>DP</p>
-				</li>
-				<li>
-					<button>New Post</button>
-				</li>
-			</ul>
-		</NavigationWrapper>
+		<Media>
+			{({ breakpoints, currentBreakpoint }) => {
+				console.log(breakpoints[currentBreakpoint], currentBreakpoint);
+
+				if (currentBreakpoint === "large") {
+					return (
+						<NavigationWrapper>
+							<ul>
+								<Logo />
+								<li>
+									<a href="home">Home</a>
+								</li>
+								<li>
+									<a href="sessions">Sessions</a>
+								</li>
+								<li>
+									<a href="topics">Topics</a>
+								</li>
+								<li>
+									<input type="search" name="search" placeholder="Search" />
+								</li>
+								<li>
+									<p>Mail</p>
+								</li>
+								<li>
+									<p>Alert</p>
+								</li>
+								<li>
+									<p>DP</p>
+								</li>
+								<li>
+									<button>New Post</button>
+								</li>
+							</ul>
+						</NavigationWrapper>
+					);
+				} else {
+					return <p>Mobile</p>;
+				}
+			}}
+		</Media>
 	);
 }

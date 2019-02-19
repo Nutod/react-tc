@@ -14,7 +14,7 @@ const LayoutWrapper = styled.div`
 
 const Button = styled.button`
 	background: blueviolet;
-	padding: 0.5rem 1rem;
+	padding: 0.5rem 0.7rem;
 	color: #fff;
 	border: none;
 	border-radius: 4px;
@@ -54,16 +54,3 @@ export default class Layout extends Component {
 		);
 	}
 }
-
-// <Media>
-// 	{({ breakpoints, currentBreakpoint }) => {
-// 		console.log(breakpoints, currentBreakpoint);
-// 		if (currentBreakpoint === "mobile") {
-// 			return <p>Mobile</p>;
-// 		} else if (currentBreakpoint === "tablet") {
-// 			return <p>Tbalet</p>;
-// 		} else if (currentBreakpoint === "desktop") {
-// 			return <Foo />;
-// 		}
-// 	}}
-// </Media>
