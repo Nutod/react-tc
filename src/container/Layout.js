@@ -18,7 +18,7 @@ const Button = styled.button`
 	color: #fff;
 	border: none;
 	border-radius: 4px;
-	font-size: 1rem;
+	font-size: 1.2rem;
 	width: 10rem;
 	grid-column: 2 / 3;
 	justify-self: center;
@@ -29,12 +29,12 @@ const Content = styled.div`
 	grid-column: 1 / -1;
 
 	display: grid;
-	grid-template-columns: 1fr 3fr 1fr;
-	grid-column-gap: 5rem;
+	grid-template-columns: 1.2fr 3fr 1.2fr;
+	grid-column-gap: 3rem;
 	grid-row-gap: 1rem;
 	margin: 0 2rem;
 
-	@media (max-width: 53em) {
+	@media (max-width: 56em) {
 		grid-template-columns: 1fr;
 	}
 `;

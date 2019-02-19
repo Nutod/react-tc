@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 const FeedsWrapper = styled.div`
-	@media (max-width: 53em) {
+	@media (max-width: 56em) {
 		order: -1;
 	}
 `;

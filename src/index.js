@@ -8,7 +8,7 @@ import ReactBreakpoints from "react-breakpoints";
 const breakpoints = {
 	mobile: 320,
 	tablet: 768,
-	large: 850
+	large: 900
 };
 
 const app = (
