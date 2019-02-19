@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import styled from "styled-components";
 import Header from "../components/Header/Header";
+import Modal from "react-responsive-modal";
 import Me from "../components/Me/Me";
 import Feeds from "../components/Feeds/Feeds";
 import Suggestions from "../components/Suggestions/Suggestions";
@@ -40,8 +41,6 @@ const Content = styled.div`
 	}
 `;
 
-// import Modal from 'react-responsive-modal';
-
 // export default class App extends React.Component {
 // 	state = {
 // 		open: false,
@@ -69,13 +68,41 @@ const Content = styled.div`
 // }
 
 export default class Layout extends Component {
+	state = {
+		modalOpen: false
+	};
+
+	onOpenModal = () => {
+		this.setState({ modalOpen: true });
+	};
+
+	onCloseModal = () => {
+		this.setState({ modalOpen: false });
+	};
+
 	render() {
 		return (
-			<AppContext.Provider value={{ name: "Oladotun" }}>
+			<AppContext.Provider
+				value={{
+					open: this.state.modalOpen,
+					onOpen: this.onOpenModal,
+					onClose: this.onCloseModal
+				}}
+			>
 				<LayoutWrapper>
 					<Header />
 					<Button>3 New Posts</Button>
 					<Content>
+						<div>
+							<button onClick={this.onOpenModal}>Open modal</button>
+							<Modal
+								open={this.state.modalOpen}
+								onClose={this.onCloseModal}
+								center
+							>
+								<h2>Simple centered modal</h2>
+							</Modal>
+						</div>
 						<Me />
 						<Feeds />
 						<Suggestions />

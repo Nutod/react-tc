@@ -5,6 +5,7 @@ import { MailOption, Notification } from "grommet-icons";
 import Logo from "../Logo/Logo";
 import { AppContext } from "../../hoc/AppContext";
 import User from "../../assets/images/user1.jpg";
+import { Menu } from "grommet";
 
 const DesktopNavigationWrapper = styled.nav`
 	ul {
@@ -34,6 +35,7 @@ const DesktopNavigationWrapper = styled.nav`
 		border: none;
 		border-radius: 4px;
 		font-size: 1.5rem;
+		cursor: pointer;
 	}
 
 	input {
@@ -100,6 +102,16 @@ export default function Navigation() {
 													placeholder="Search"
 												/>
 											</li>
+											{/* <li>
+												<Menu
+													label=""
+													items={[
+														{ label: "First Action", onClick: () => {} },
+														{ label: "Second Action", onClick: () => {} }
+													]}
+													icon={<MailOption />}
+												/>
+											</li> */}
 											<li>
 												<MailOption size="medium" color="#fff" />
 											</li>
