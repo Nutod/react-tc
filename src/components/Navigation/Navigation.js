@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { Media } from "react-breakpoints";
 import Logo from "../Logo/Logo";
+import { AppContext } from "../../hoc/AppContext";
 
 const DesktopNavigationWrapper = styled.nav`
 	ul {
@@ -62,52 +63,63 @@ const MobileNavigationWrapper = styled.nav`
 
 export default function Navigation() {
 	return (
-		<Media>
-			{({ breakpoints, currentBreakpoint }) => {
-				console.log(breakpoints[currentBreakpoint], currentBreakpoint);
-				if (currentBreakpoint === "large") {
-					return (
-						<DesktopNavigationWrapper>
-							<ul>
-								<Logo />
-								<li>
-									<a href="home">Home</a>
-								</li>
-								<li>
-									<a href="sessions">Sessions</a>
-								</li>
-								<li>
-									<a href="topics">Topics</a>
-								</li>
-								<li>
-									<input type="search" name="search" placeholder="Search" />
-								</li>
-								<li>
-									<p>Mail</p>
-								</li>
-								<li>
-									<p>Alert</p>
-								</li>
-								<li>
-									<p>DP</p>
-								</li>
-								<li>
-									<button>New Post</button>
-								</li>
-							</ul>
-						</DesktopNavigationWrapper>
-					);
-				} else {
-					return (
-						<MobileNavigationWrapper>
-							<ul>
-								<Logo />
-								<p>Menu</p>
-							</ul>
-						</MobileNavigationWrapper>
-					);
-				}
+		<AppContext.Consumer>
+			{context => {
+				console.log(context);
+				return (
+					<Media>
+						{({ breakpoints, currentBreakpoint }) => {
+							console.log(breakpoints[currentBreakpoint], currentBreakpoint);
+							if (currentBreakpoint === "large") {
+								return (
+									<DesktopNavigationWrapper>
+										<ul>
+											<Logo />
+											<li>
+												<a href="home">Home</a>
+											</li>
+											<li>
+												<a href="sessions">Sessions</a>
+											</li>
+											<li>
+												<a href="topics">Topics</a>
+											</li>
+											<li>
+												<input
+													type="search"
+													name="search"
+													placeholder="Search"
+												/>
+											</li>
+											<li>
+												<p>Mail</p>
+											</li>
+											<li>
+												<p>Alert</p>
+											</li>
+											<li>
+												<p>DP</p>
+											</li>
+											<li>
+												<button>New Post</button>
+											</li>
+										</ul>
+									</DesktopNavigationWrapper>
+								);
+							} else {
+								return (
+									<MobileNavigationWrapper>
+										<ul>
+											<Logo />
+											<p>Menu</p>
+										</ul>
+									</MobileNavigationWrapper>
+								);
+							}
+						}}
+					</Media>
+				);
 			}}
-		</Media>
+		</AppContext.Consumer>
 	);
 }

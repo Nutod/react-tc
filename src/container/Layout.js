@@ -4,6 +4,7 @@ import Header from "../components/Header/Header";
 import Me from "../components/Me/Me";
 import Feeds from "../components/Feeds/Feeds";
 import Suggestions from "../components/Suggestions/Suggestions";
+import { AppContext } from "../hoc/AppContext";
 
 const LayoutWrapper = styled.div`
 	display: grid;
@@ -42,15 +43,17 @@ const Content = styled.div`
 export default class Layout extends Component {
 	render() {
 		return (
-			<LayoutWrapper>
-				<Header />
-				<Button>3 New Posts</Button>
-				<Content>
-					<Me />
-					<Feeds />
-					<Suggestions />
-				</Content>
-			</LayoutWrapper>
+			<AppContext.Provider value={{ name: "Oladotun" }}>
+				<LayoutWrapper>
+					<Header />
+					<Button>3 New Posts</Button>
+					<Content>
+						<Me />
+						<Feeds />
+						<Suggestions />
+					</Content>
+				</LayoutWrapper>
+			</AppContext.Provider>
 		);
 	}
 }
