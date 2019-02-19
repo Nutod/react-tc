@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { Media } from "react-breakpoints";
 import { Menu } from "grommet";
-import { MailOption, Notification } from "grommet-icons";
+import { MailOption, Notification, Menu } from "grommet-icons";
 import Logo from "../Logo/Logo";
 import { AppContext } from "../../hoc/AppContext";
 import User from "../../assets/images/user1.jpg";
@@ -107,6 +107,52 @@ function Message() {
 	);
 }
 
+function Search() {
+	return <input type="search" name="search" placeholder="Search" />;
+}
+
+function Mail() {
+	return (
+		<Menu
+			label=""
+			items={[
+				{ label: <Message />, onClick: () => {} },
+				{ label: <Message />, onClick: () => {} },
+				{ label: <Message />, onClick: () => {} },
+				{ label: <Message />, onClick: () => {} },
+				{ label: <Message />, onClick: () => {} }
+			]}
+			icon={<MailOption size="medium" color="#fff" />}
+		/>
+	);
+}
+
+function Notification() {
+	return (
+		<Menu
+			label=""
+			items={[
+				{ label: "First Action", onClick: () => {} },
+				{ label: "Second Action", onClick: () => {} }
+			]}
+			icon={<Notification size="medium" color="#fff" />}
+		/>
+	);
+}
+
+function Profile() {
+	return (
+		<Menu
+			label=""
+			items={[
+				{ label: "First Action", onClick: () => {} },
+				{ label: "Second Action", onClick: () => {} }
+			]}
+			icon={<Image src={User} alt="User" />}
+		/>
+	);
+}
+
 export default function Navigation() {
 	return (
 		<AppContext.Consumer>
@@ -129,44 +175,16 @@ export default function Navigation() {
 												<a href="topics">Topics</a>
 											</li>
 											<li>
-												<input
-													type="search"
-													name="search"
-													placeholder="Search"
-												/>
+												<Search />
 											</li>
 											<li>
-												<Menu
-													label=""
-													items={[
-														{ label: <Message />, onClick: () => {} },
-														{ label: <Message />, onClick: () => {} },
-														{ label: <Message />, onClick: () => {} },
-														{ label: <Message />, onClick: () => {} },
-														{ label: <Message />, onClick: () => {} }
-													]}
-													icon={<MailOption size="medium" color="#fff" />}
-												/>
+												<Mail />
 											</li>
 											<li>
-												<Menu
-													label=""
-													items={[
-														{ label: "First Action", onClick: () => {} },
-														{ label: "Second Action", onClick: () => {} }
-													]}
-													icon={<Notification size="medium" color="#fff" />}
-												/>
+												<Notification />
 											</li>
 											<li>
-												<Menu
-													label=""
-													items={[
-														{ label: "First Action", onClick: () => {} },
-														{ label: "Second Action", onClick: () => {} }
-													]}
-													icon={<Image src={User} alt="User" />}
-												/>
+												<Profile />
 											</li>
 											<li>
 												<Button onClick={openModal}>New Post</Button>
@@ -179,7 +197,19 @@ export default function Navigation() {
 									<MobileNavigationWrapper>
 										<ul>
 											<Logo />
-											<p>Menu</p>
+											<Menu
+												dropAlign={{ top: "top", right: "right" }}
+												items={[
+													{ label: "Home", onClick: () => {} },
+													{ label: "Sessions", onClick: () => {} },
+													{ label: "Topics", onClick: () => {} },
+													{ label: <Search />, onClick: () => {} },
+													{ label: <Mail />, onClick: () => {} },
+													{ label: <Notification />, onClick: () => {} },
+													{ label: <Profile />, onClick: () => {} }
+												]}
+												icon={<Menu color="white" />}
+											/>
 										</ul>
 									</MobileNavigationWrapper>
 								);

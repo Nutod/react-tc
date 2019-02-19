@@ -6,10 +6,7 @@ export default function NewPost() {
 		<Tabs justify="start">
 			<Tab title="QUESTIONS" color="yellow">
 				<Box pad="medium">
-					Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit
-					vitae, commodi reprehenderit aliquam, laboriosam nulla animi
-					doloremque, necessitatibus odio consequatur quas. Sint inventore
-					dolorem mollitia, odio recusandae quibusdam assumenda magnam.
+					<p>Content</p>
 				</Box>
 			</Tab>
 			<Tab title="INSIGHTS">

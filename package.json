@@ -6,6 +6,7 @@
   "dependencies": {
     "grommet": "^2.4.0",
     "grommet-icons": "^4.2.0",
+    "rc-progress": "^2.3.0",
     "react": "^16.8.2",
     "react-breakpoints": "^3.0.3",
     "react-dom": "^16.8.2",
