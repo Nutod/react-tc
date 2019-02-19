@@ -8,6 +8,7 @@ const CardWrapper = styled.div`
 	border: 1px solid #ccc;
 	border-radius: 3px;
 	font-size: 1.2rem;
+	background: #fff;
 
 	@media (max-width: 53em) {
 		font-size: 1.1rem;

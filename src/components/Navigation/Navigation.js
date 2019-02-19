@@ -30,7 +30,7 @@ const DesktopNavigationWrapper = styled.nav`
 		color: #fff;
 		border: none;
 		border-radius: 4px;
-		font-size: 1rem;
+		font-size: 1.5rem;
 	}
 
 	input {

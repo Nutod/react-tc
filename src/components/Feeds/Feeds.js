@@ -7,21 +7,33 @@ const FeedsWrapper = styled.div`
 	}
 `;
 
+const FeedContainer = styled.div``;
+
+const FeedHeader = styled.div``;
+
+const FeedContent = styled.div`
+	p {
+		font-size: 1rem;
+	}
+`;
+
+const FeedReaction = styled.div``;
+
 export default function Feeds() {
 	return (
 		<FeedsWrapper>
-			<div>
-				Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus suscipit,
-				doloremque molestias neque cum dolorum exercitationem, doloribus eos at
-				deleniti nulla deserunt asperiores, impedit optio earum incidunt
-				voluptatem assumenda fugiat.
-			</div>{" "}
-			<div>
-				Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam, at
-				quam? Reprehenderit consequatur soluta inventore corrupti, consequuntur
-				ipsum facilis perferendis repellat beatae aut ipsam doloribus, excepturi
-				cupiditate recusandae aperiam dignissimos.
-			</div>
+			<FeedContainer>
+				<FeedHeader>HEADER</FeedHeader>
+				<FeedContent>
+					<p>
+						Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aperiam
+						ipsam eum qui ea, error eveniet eligendi nobis inventore laudantium
+						natus molestias exercitationem! Expedita earum soluta animi esse
+						aliquid recusandae praesentium.
+					</p>
+				</FeedContent>
+				<FeedReaction>REACTION</FeedReaction>
+			</FeedContainer>
 		</FeedsWrapper>
 	);
 }
