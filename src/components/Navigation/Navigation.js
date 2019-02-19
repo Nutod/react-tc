@@ -1,11 +1,11 @@
 import React from "react";
 import styled from "styled-components";
 import { Media } from "react-breakpoints";
+import { Menu } from "grommet";
 import { MailOption, Notification } from "grommet-icons";
 import Logo from "../Logo/Logo";
 import { AppContext } from "../../hoc/AppContext";
 import User from "../../assets/images/user1.jpg";
-import { Menu } from "grommet";
 
 const DesktopNavigationWrapper = styled.nav`
 	ul {
@@ -72,6 +72,41 @@ const Button = styled.button`
 	cursor: pointer;
 `;
 
+const ContainerContent = styled.div`
+	display: flex;
+	align-items: flex-start;
+`;
+
+const ContainerContentImage = styled.img`
+	width: 2rem;
+	height: 2rem;
+	border-radius: 50%;
+	margin-right: 1rem;
+`;
+
+const ContainerContentHeader = styled.p`
+	font-size: 1rem;
+`;
+
+const ContainerContentText = styled.p`
+	color: #888;
+	font-size: 0.8rem;
+	line-height: 1;
+`;
+
+function Message() {
+	return (
+		<ContainerContent>
+			<ContainerContentImage src={User} alt="Yomi Adedeji" />
+			<div>
+				<ContainerContentHeader>Yomi Adedeji</ContainerContentHeader>
+				<ContainerContentText>Managing Partner @Softcom</ContainerContentText>
+			</div>
+			<ContainerContentText>10mins ago</ContainerContentText>
+		</ContainerContent>
+	);
+}
+
 export default function Navigation() {
 	return (
 		<AppContext.Consumer>
@@ -79,7 +114,6 @@ export default function Navigation() {
 				return (
 					<Media>
 						{({ breakpoints, currentBreakpoint }) => {
-							console.log(breakpoints[currentBreakpoint], currentBreakpoint);
 							if (currentBreakpoint === "large") {
 								return (
 									<DesktopNavigationWrapper>
@@ -105,8 +139,11 @@ export default function Navigation() {
 												<Menu
 													label=""
 													items={[
-														{ label: "First Action", onClick: () => {} },
-														{ label: "Second Action", onClick: () => {} }
+														{ label: <Message />, onClick: () => {} },
+														{ label: <Message />, onClick: () => {} },
+														{ label: <Message />, onClick: () => {} },
+														{ label: <Message />, onClick: () => {} },
+														{ label: <Message />, onClick: () => {} }
 													]}
 													icon={<MailOption size="medium" color="#fff" />}
 												/>
