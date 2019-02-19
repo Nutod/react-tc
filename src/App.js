@@ -6,7 +6,6 @@ class App extends Component {
 	render() {
 		return (
 			<Grommet>
-				<p>App Working</p>
 				<Layout />
 			</Grommet>
 		);

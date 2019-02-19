@@ -1,13 +1,18 @@
 import React, { Component } from "react";
-// import { Media } from "react-breakpoints";
+import styled from "styled-components";
+
+const LayoutWrapper = styled.div`
+	display: grid;
+	grid-template-rows: 3rem auto;
+`;
 
 export default class Layout extends Component {
 	render() {
 		return (
-			<div>
-				<p>HEADER</p>
-				<p>CONTENT</p>
-			</div>
+			<LayoutWrapper>
+				<div>HEADER</div>
+				<div>CONTENT</div>
+			</LayoutWrapper>
 		);
 	}
 }
