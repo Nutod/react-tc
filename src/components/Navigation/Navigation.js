@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { Media } from "react-breakpoints";
 import Logo from "../Logo/Logo";
 import { AppContext } from "../../hoc/AppContext";
+import User from "../../assets/images/user1.jpg";
 
 const DesktopNavigationWrapper = styled.nav`
 	ul {
@@ -61,6 +62,13 @@ const MobileNavigationWrapper = styled.nav`
 	}
 `;
 
+const Image = styled.img`
+	width: 2.5rem;
+	height: 2.5rem;
+	border-radius: 50%;
+	margin-right: 1rem;
+`;
+
 export default function Navigation() {
 	return (
 		<AppContext.Consumer>
@@ -98,7 +106,7 @@ export default function Navigation() {
 												<p>Alert</p>
 											</li>
 											<li>
-												<p>DP</p>
+												<Image src={User} alt="User" />
 											</li>
 											<li>
 												<button>New Post</button>
