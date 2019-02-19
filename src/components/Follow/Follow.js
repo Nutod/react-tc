@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import User from "../../assets/images/user1.jpg";
 
 const FollowWrapper = styled.div`
 	border: 1px solid #ccc;
@@ -44,12 +45,11 @@ const ContainerContent = styled.div`
 	align-items: center;
 `;
 
-const ContainerContentImage = styled.div`
-	background: pink;
+const ContainerContentImage = styled.img`
 	width: 2.5rem;
 	height: 2.5rem;
 	border-radius: 50%;
-	margin-right: 0.5rem;
+	margin-right: 1rem;
 `;
 
 const ContainerContentHeader = styled.p`
@@ -100,7 +100,7 @@ export default function Follow() {
 				</ContainerHeader>
 				<ContainerContentWrapper>
 					<ContainerContent>
-						<ContainerContentImage />
+						<ContainerContentImage src={User} alt="Yomi Adedeji" />
 						<div>
 							<ContainerContentHeader>Yomi Adedeji</ContainerContentHeader>
 							<ContainerContentText>
@@ -113,7 +113,7 @@ export default function Follow() {
 				</ContainerContentWrapper>
 				<ContainerContentWrapper>
 					<ContainerContent>
-						<ContainerContentImage />
+						<ContainerContentImage src={User} alt="Yomi Adedeji" />
 						<div>
 							<ContainerContentHeader>Yomi Adedeji</ContainerContentHeader>
 							<ContainerContentText>
@@ -126,7 +126,7 @@ export default function Follow() {
 				</ContainerContentWrapper>
 				<ContainerContentWrapper>
 					<ContainerContent>
-						<ContainerContentImage />
+						<ContainerContentImage src={User} alt="Yomi Adedeji" />
 						<div>
 							<ContainerContentHeader>Yomi Adedeji</ContainerContentHeader>
 							<ContainerContentText>
