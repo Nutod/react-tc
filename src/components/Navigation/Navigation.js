@@ -28,16 +28,6 @@ const DesktopNavigationWrapper = styled.nav`
 		color: #fff;
 	}
 
-	button {
-		background: green;
-		padding: 0.5rem 1rem;
-		color: #fff;
-		border: none;
-		border-radius: 4px;
-		font-size: 1.5rem;
-		cursor: pointer;
-	}
-
 	input {
 		font-family: inherit;
 		width: 20vw;
@@ -70,6 +60,16 @@ const Image = styled.img`
 	height: 4rem;
 	border-radius: 50%;
 	margin-right: 1rem;
+`;
+
+const Button = styled.button`
+	background: green;
+	padding: 0.5rem 1rem;
+	color: #fff;
+	border: none;
+	border-radius: 4px;
+	font-size: 1.5rem;
+	cursor: pointer;
 `;
 
 export default function Navigation() {
@@ -122,7 +122,7 @@ export default function Navigation() {
 												<Image src={User} alt="User" />
 											</li>
 											<li>
-												<button>New Post</button>
+												<Button>New Post</Button>
 											</li>
 										</ul>
 									</DesktopNavigationWrapper>

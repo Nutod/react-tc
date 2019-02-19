@@ -92,17 +92,17 @@ export default class Layout extends Component {
 				<LayoutWrapper>
 					<Header />
 					<Button>3 New Posts</Button>
+					<div>
+						<button onClick={this.onOpenModal}>Open modal</button>
+						<Modal
+							open={this.state.modalOpen}
+							onClose={this.onCloseModal}
+							center
+						>
+							<h2>Simple centered modal</h2>
+						</Modal>
+					</div>
 					<Content>
-						<div>
-							<button onClick={this.onOpenModal}>Open modal</button>
-							<Modal
-								open={this.state.modalOpen}
-								onClose={this.onCloseModal}
-								center
-							>
-								<h2>Simple centered modal</h2>
-							</Modal>
-						</div>
 						<Me />
 						<Feeds />
 						<Suggestions />
