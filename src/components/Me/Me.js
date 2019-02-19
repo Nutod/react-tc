@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import User from "../../assets/images/user1.jpg";
 
 const CardWrapper = styled.div`
 	align-self: start;
@@ -50,8 +51,7 @@ const ContainerContent = styled.div`
 	display: flex;
 `;
 
-const ContainerContentImage = styled.div`
-	background: pink;
+const ContainerContentImage = styled.img`
 	width: 4rem;
 	height: 4rem;
 	border-radius: 50%;
@@ -100,7 +100,7 @@ export default function Me() {
 				</ContainerHeader>
 				<ContainerContentWrapper>
 					<ContainerContent>
-						<ContainerContentImage />
+						<ContainerContentImage src={User} alt="Yomi Adedeji" />
 						<div>
 							<ContainerContentHeader>Yomi Adedeji</ContainerContentHeader>
 							<ContainerContentText>
@@ -112,7 +112,7 @@ export default function Me() {
 				</ContainerContentWrapper>
 				<ContainerContentWrapper>
 					<ContainerContent>
-						<ContainerContentImage />
+						<ContainerContentImage src={User} alt="Yomi Adedeji" />
 						<div>
 							<ContainerContentHeader>Don Jazzy</ContainerContentHeader>
 							<ContainerContentText>
@@ -130,7 +130,7 @@ export default function Me() {
 				</ContainerHeader>
 				<ContainerContentWrapper>
 					<ContainerContent>
-						<ContainerContentImage />
+						<ContainerContentImage src={User} alt="Yomi Adedeji" />
 						<div>
 							<ContainerContentHeader>Cyrus Majebi</ContainerContentHeader>
 							<ContainerContentText>Co-founder @Two cents</ContainerContentText>
@@ -144,7 +144,7 @@ export default function Me() {
 				</Description>
 				<ContainerContentWrapper>
 					<ContainerContent>
-						<ContainerContentImage />
+						<ContainerContentImage src={User} alt="Yomi Adedeji" />
 						<div>
 							<ContainerContentHeader>Cyrus Majebi</ContainerContentHeader>
 							<ContainerContentText>Co-founder @Two cents</ContainerContentText>
