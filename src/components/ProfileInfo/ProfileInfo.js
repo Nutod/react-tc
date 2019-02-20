@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { Line } from "rc-progress";
 
 const ProfileWrapper = styled.div`
 	border: 1px solid #ccc;
@@ -18,10 +19,15 @@ const ProfileDetails = styled.div`
 	border-bottom: 1px solid #ccc;
 `;
 
+const ProfileHeader = styled.div`
+	display: flex;
+	justify-content: space-between;
+`;
+
 const CompleteProfileButton = styled.button`
 	background: #fff;
 	border: none;
-	color: blueviolet;
+	color: #127bdd;
 	padding: 1rem;
 	text-transform: uppercase;
 	font-weight: 500;
@@ -31,8 +37,11 @@ export default function ProfileInfo() {
 	return (
 		<ProfileWrapper>
 			<ProfileDetails>
-				<p>Profile Info</p>
-				<p>Range Component</p>
+				<ProfileHeader>
+					<p>Profile</p>
+					<p>60%</p>
+				</ProfileHeader>
+				<Line percent="60" strokeWidth="1" strokeColor="green" />
 				<p>Education - Where did you go to School?</p>
 				<p>Bio - Let people know more about you by adding a short bio</p>
 				<p>City - Where do you live?</p>

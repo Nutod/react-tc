@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { Media } from "react-breakpoints";
 import { Menu } from "grommet";
-import { MailOption, Notification, Menu } from "grommet-icons";
+import { MailOption, Notification, Apps } from "grommet-icons";
 import Logo from "../Logo/Logo";
 import { AppContext } from "../../hoc/AppContext";
 import User from "../../assets/images/user1.jpg";
@@ -127,7 +127,7 @@ function Mail() {
 	);
 }
 
-function Notification() {
+function Notifications() {
 	return (
 		<Menu
 			label=""
@@ -181,7 +181,7 @@ export default function Navigation() {
 												<Mail />
 											</li>
 											<li>
-												<Notification />
+												<Notifications />
 											</li>
 											<li>
 												<Profile />
@@ -198,17 +198,21 @@ export default function Navigation() {
 										<ul>
 											<Logo />
 											<Menu
+												justifyContent="center"
 												dropAlign={{ top: "top", right: "right" }}
 												items={[
 													{ label: "Home", onClick: () => {} },
 													{ label: "Sessions", onClick: () => {} },
 													{ label: "Topics", onClick: () => {} },
 													{ label: <Search />, onClick: () => {} },
-													{ label: <Mail />, onClick: () => {} },
-													{ label: <Notification />, onClick: () => {} },
-													{ label: <Profile />, onClick: () => {} }
+													{ label: "Messages", onClick: () => {} },
+													{ label: "Notifications", onClick: () => {} },
+													{
+														label: <Image src={User} alt="User" />,
+														onClick: () => {}
+													}
 												]}
-												icon={<Menu color="white" />}
+												icon={<Apps color="white" />}
 											/>
 										</ul>
 									</MobileNavigationWrapper>

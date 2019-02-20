@@ -16,8 +16,8 @@ const LayoutWrapper = styled.div`
 `;
 
 const Button = styled.button`
-	background: blueviolet;
-	padding: 0.5rem 0.7rem;
+	background: #127bdd;
+	padding: 1rem 0.7rem;
 	color: #fff;
 	border: none;
 	border-radius: 4px;

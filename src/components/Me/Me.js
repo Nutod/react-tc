@@ -1,6 +1,8 @@
 import React from "react";
 import styled from "styled-components";
-import User from "../../assets/images/user1.jpg";
+import { RotateRight } from "grommet-icons";
+import UserOne from "../../assets/images/user1.jpg";
+import UserTwo from "../../assets/images/userImage2.jpg";
 
 const CardWrapper = styled.div`
 	align-self: start;
@@ -36,8 +38,14 @@ const Title = styled.p`
 	text-transform: uppercase;
 `;
 
-const Icon = styled.p`
-	color: blueviolet;
+const Icon = styled.div`
+	color: #127bdd;
+	display: flex;
+	align-items: center;
+
+	p {
+		margin-left: 0.5rem;
+	}
 `;
 
 const ContainerContentWrapper = styled.div`
@@ -96,11 +104,14 @@ export default function Me() {
 			<Container>
 				<ContainerHeader>
 					<Title>Sessions</Title>
-					<Icon>refresh</Icon>
+					<Icon>
+						<RotateRight color="#127bdd" size="small" />
+						<p>refresh</p>
+					</Icon>
 				</ContainerHeader>
 				<ContainerContentWrapper>
 					<ContainerContent>
-						<ContainerContentImage src={User} alt="Yomi Adedeji" />
+						<ContainerContentImage src={UserOne} alt="Yomi Adedeji" />
 						<div>
 							<ContainerContentHeader>Yomi Adedeji</ContainerContentHeader>
 							<ContainerContentText>
@@ -112,7 +123,7 @@ export default function Me() {
 				</ContainerContentWrapper>
 				<ContainerContentWrapper>
 					<ContainerContent>
-						<ContainerContentImage src={User} alt="Yomi Adedeji" />
+						<ContainerContentImage src={UserTwo} alt="Don Jazzy" />
 						<div>
 							<ContainerContentHeader>Don Jazzy</ContainerContentHeader>
 							<ContainerContentText>
@@ -126,11 +137,14 @@ export default function Me() {
 			<Container>
 				<ContainerHeader>
 					<Title>Insights</Title>
-					<Icon>refresh</Icon>
+					<Icon>
+						<RotateRight color="#127bdd" size="small" />
+						<p>refresh</p>
+					</Icon>
 				</ContainerHeader>
 				<ContainerContentWrapper>
 					<ContainerContent>
-						<ContainerContentImage src={User} alt="Yomi Adedeji" />
+						<ContainerContentImage src={UserOne} alt="Yomi Adedeji" />
 						<div>
 							<ContainerContentHeader>Cyrus Majebi</ContainerContentHeader>
 							<ContainerContentText>Co-founder @Two cents</ContainerContentText>
@@ -144,7 +158,7 @@ export default function Me() {
 				</Description>
 				<ContainerContentWrapper>
 					<ContainerContent>
-						<ContainerContentImage src={User} alt="Yomi Adedeji" />
+						<ContainerContentImage src={UserTwo} alt="Yomi Adedeji" />
 						<div>
 							<ContainerContentHeader>Cyrus Majebi</ContainerContentHeader>
 							<ContainerContentText>Co-founder @Two cents</ContainerContentText>
@@ -160,7 +174,10 @@ export default function Me() {
 			<Container>
 				<ContainerHeader>
 					<Title>Questions</Title>
-					<Icon>refresh</Icon>
+					<Icon>
+						<RotateRight color="#127bdd" size="small" />
+						<p>refresh</p>
+					</Icon>
 				</ContainerHeader>
 				<ContainerContentWrapper>
 					<Questions>

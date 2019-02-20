@@ -21,7 +21,7 @@ const ExpertsWrapper = styled.div`
 		font-size: 2rem;
 
 		span {
-			color: blueviolet;
+			color: #127bdd;
 		}
 	}
 

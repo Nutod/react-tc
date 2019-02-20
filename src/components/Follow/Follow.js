@@ -31,7 +31,7 @@ const Title = styled.p`
 `;
 
 const Icon = styled.div`
-	color: blueviolet;
+	color: #127bdd;
 	display: flex;
 	align-items: center;
 
@@ -104,7 +104,7 @@ export default function Follow() {
 				<ContainerHeader>
 					<Title>Who to Follow</Title>
 					<Icon>
-						<RotateRight color="blueviolet" size="small" />
+						<RotateRight color="#127bdd" size="small" />
 						<p>refresh</p>
 					</Icon>
 				</ContainerHeader>
