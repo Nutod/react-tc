@@ -99,12 +99,29 @@ const ContainerContentImage = styled.img`
 
 const ContainerContentHeader = styled.p`
 	font-size: 1rem;
+
+	span {
+		color: #000;
+		font-weight: 600;
+	}
 `;
 
 const ContainerContentText = styled.p`
 	color: #888;
 	font-size: 0.8rem;
 	line-height: 1;
+`;
+
+const ContainerContentPlaceholder = styled.div`
+	width: 2rem;
+	background: green;
+	height: 2rem;
+	border-radius: 50%;
+	margin-right: 1rem;
+`;
+
+const NotificationContainerContent = styled(ContainerContent)`
+	align-items: center;
 `;
 
 function Message() {
@@ -140,13 +157,30 @@ function Mail() {
 	);
 }
 
+function NewNotification() {
+	return (
+		<NotificationContainerContent>
+			<ContainerContentPlaceholder />
+			<div>
+				<ContainerContentHeader>
+					<span>Evan Ngoji</span> shared an <span>Insight</span>
+				</ContainerContentHeader>
+				<ContainerContentText>1 min ago</ContainerContentText>
+			</div>
+		</NotificationContainerContent>
+	);
+}
+
 function Notifications() {
 	return (
 		<Menu
 			label=""
 			items={[
-				{ label: "First Action", onClick: () => {} },
-				{ label: "Second Action", onClick: () => {} }
+				{ label: <NewNotification />, onClick: () => {} },
+				{ label: <NewNotification />, onClick: () => {} },
+				{ label: <NewNotification />, onClick: () => {} },
+				{ label: <NewNotification />, onClick: () => {} },
+				{ label: <NewNotification />, onClick: () => {} }
 			]}
 			icon={<Notification size="medium" color="#fff" />}
 		/>
