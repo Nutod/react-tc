@@ -16,57 +16,18 @@ import {
 	DocumentText,
 	Logout
 } from "grommet-icons";
-import Logo from "../Logo/Logo";
 import { AppContext } from "../../hoc/AppContext";
+import Logo from "../Logo/Logo";
 import User from "../../assets/images/user1.jpg";
-
-const DesktopNavigationWrapper = styled.nav`
-	ul {
-		display: flex;
-		list-style: none;
-		justify-content: space-between;
-		align-items: center;
-		color: #fff;
-		flex-wrap: wrap;
-	}
-
-	li {
-		&:not(:last-child) {
-			margin-right: 1rem;
-		}
-	}
-
-	a {
-		text-decoration: none;
-		color: #fff;
-	}
-
-	input {
-		font-family: inherit;
-		width: 20vw;
-		border: none;
-		border-radius: 4px;
-		padding: 0.4rem 0.6rem;
-		background: #f5f5f5;
-	}
-`;
-
-const MobileNavigationWrapper = styled.nav`
-	ul {
-		display: flex;
-		list-style: none;
-		justify-content: space-between;
-		align-items: center;
-		color: #fff;
-		flex-wrap: wrap;
-	}
-
-	li {
-		&:not(:last-child) {
-			margin-right: 1rem;
-		}
-	}
-`;
+import {
+	DesktopNavigationWrapper,
+	MobileNavigationWrapper,
+	ContainerContent,
+	ContainerContentPlaceholder,
+	ContainerContentImage,
+	ContainerContentHeader,
+	ContainerContentText
+} from "../styles/Wrapper";
 
 const Image = styled.img`
 	width: 4rem;
@@ -83,41 +44,6 @@ const Button = styled.button`
 	border-radius: 4px;
 	font-size: 1.5rem;
 	cursor: pointer;
-`;
-
-const ContainerContent = styled.div`
-	display: flex;
-	align-items: flex-start;
-`;
-
-const ContainerContentImage = styled.img`
-	width: 2rem;
-	height: 2rem;
-	border-radius: 50%;
-	margin-right: 1rem;
-`;
-
-const ContainerContentHeader = styled.p`
-	font-size: 1rem;
-
-	span {
-		color: #000;
-		font-weight: 600;
-	}
-`;
-
-const ContainerContentText = styled.p`
-	color: #888;
-	font-size: 0.8rem;
-	line-height: 1;
-`;
-
-const ContainerContentPlaceholder = styled.div`
-	width: 2rem;
-	background: green;
-	height: 2rem;
-	border-radius: 50%;
-	margin-right: 1rem;
 `;
 
 const NotificationContainerContent = styled(ContainerContent)`
