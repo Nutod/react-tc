@@ -10,6 +10,18 @@ import {
 	Chat
 } from "grommet-icons";
 import User from "../../assets/images/user1.jpg";
+import {
+	FeedsWrapper,
+	FeedContainer,
+	FeedHeader,
+	FeedHeaderContent,
+	FeedContent,
+	FeedReaction,
+	FeedShare,
+	FeedHeaderImagePlaceholder,
+	Title,
+	Info
+} from "../styles/FeedsWrapper";
 
 export default function Feeds() {
 	return (
