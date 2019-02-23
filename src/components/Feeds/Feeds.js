@@ -18,6 +18,8 @@ import {
 	FeedContent,
 	FeedReaction,
 	FeedShare,
+	Comment,
+	FeedHeaderImage,
 	FeedHeaderImagePlaceholder,
 	Title,
 	Info
