@@ -15,7 +15,7 @@ const Button = styled.button`
 	cursor: pointer;
 `;
 
-export default function NewPost() {
+export default function NewPost( ) {
 	return (
 		<Tabs justify="start">
 			<Tab title="QUESTIONS" color="yellow">

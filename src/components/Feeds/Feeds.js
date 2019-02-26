@@ -1,14 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import {
-	More,
-	Facebook,
-	Twitter,
-	Linkedin,
-	Like,
-	View,
-	Chat
-} from "grommet-icons";
+import { More, Facebook, Twitter, Linkedin, Like, View, Chat } from "grommet-icons";
 import User from "../../assets/images/user1.jpg";
 import {
 	FeedsWrapper,
@@ -41,10 +33,9 @@ export default function Feeds() {
 				</FeedHeader>
 				<FeedContent>
 					<p>
-						Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aperiam
-						ipsam eum qui ea, error eveniet eligendi nobis inventore laudantium
-						natus molestias exercitationem! Expedita earum soluta animi esse
-						aliquid recusandae praesentium.
+						Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aperiam ipsam eum qui ea, error
+						eveniet eligendi nobis inventore laudantium natus molestias exercitationem! Expedita earum
+						soluta animi esse aliquid recusandae praesentium.
 					</p>
 				</FeedContent>
 				<FeedReaction>
@@ -66,10 +57,9 @@ export default function Feeds() {
 				</FeedHeader>
 				<FeedContent>
 					<p>
-						Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aperiam
-						ipsam eum qui ea, error eveniet eligendi nobis inventore laudantium
-						natus molestias exercitationem! Expedita earum soluta animi esse
-						aliquid recusandae praesentium.
+						Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aperiam ipsam eum qui ea, error
+						eveniet eligendi nobis inventore laudantium natus molestias exercitationem! Expedita earum
+						soluta animi esse aliquid recusandae praesentium.
 					</p>
 				</FeedContent>
 				<FeedReaction>
