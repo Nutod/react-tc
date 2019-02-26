@@ -2,29 +2,6 @@ import React from "react";
 import { Tabs, Tab, Box } from "grommet";
 import styled from "styled-components";
 
-const Form = styled.form`
-	display: flex;
-	flex-direction: column;
-
-	label {
-		color: #aaa;
-		margin-top: 1.4rem;
-		font-size: 1rem;
-	}
-`;
-
-const FormField = styled.input`
-	width: 40vw;
-	border: none;
-	border-bottom: 1px solid #ccc;
-	padding: 1rem 0;
-	outline: none;
-
-	@media (max-width: 40em) {
-		width: 70vw;
-	}
-`;
-
 const Button = styled.button`
 	align-self: flex-end;
 	margin-top: 1.4rem;
