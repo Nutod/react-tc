@@ -1,5 +1,4 @@
 import React from "react";
-import styled from "styled-components";
 import { More, Facebook, Twitter, Linkedin, Like, View, Chat } from "grommet-icons";
 import User from "../../assets/images/user1.jpg";
 import {
